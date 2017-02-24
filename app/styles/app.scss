@@ -9,26 +9,37 @@ $c-blue: #31acfb;
 $c-green: #4ccc75;
 $c-notwhite: #f0f0f0;
 $c-red: #fa0026;
+$c-white: #fff;
+$c-border: #cdd3d6;
 
 
 @import 'box-sizing';
 @import 'resets';
 
 .sidebar {
-  background: $c-blue;
-  height: 100vh;
-  min-width: 12rem;
   position: relative;
+  min-width: 12rem;
+  height: 100vh;
+  background: $c-blue;
+  box-shadow: 0 0 0.5rem 0 rgba(#000, 0.4);
 
   &-top {
-    background: $c-lightblue;
     padding: 1rem 0.5rem;
+    background: $c-lightblue;
     font-size: 1.25rem;
+    font-weight: bold;
+    box-shadow: 0 0 0.5rem 0 rgba(#000, 0.4);
   }
 
-  &-thing {
+  &-field {
+    // display: flex;
+    // flex-grow: 1;
+    min-width: 10.5rem;
+    padding: 0.5rem;
+    border: 0;
+    outline: none;
     background: $c-lightblue;
-    padding: 0.25rem;
+    box-shadow: 0 0 0.5rem 0 rgba(#000, 0.2);
   }
 }
 
@@ -36,12 +47,54 @@ $c-red: #fa0026;
   margin: 0.5rem;
 }
 
-.button {
-  background: $c-green;
+.submit {
   position: absolute;
   bottom: 0;
-  padding: 1rem;
   width: 100%;
+  padding: 1rem;
+  border: 0;
+  outline: none;
+  background: $c-green;
+  color: $c-white;
+  text-decoration: none;
+}
+
+.section {
+  flex-grow: 1;
+  background: $c-notwhite;
+}
+
+.grid {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+
+  &-item {
+    flex-basis: calc(100% / 3 - 2rem);
+    margin: 1rem;
+    border: 0.025rem solid $c-border;
+    background: $c-white;
+  }
+
+  &-top {
+    padding: 1rem;
+  }
+
+  &-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+
+  &-street {
+    padding: 1rem 0;
+  }
+
+  &-delete {
+    width: 100%;
+    padding: 1rem;
+    border: 0;
+    outline: none;
+    background: $c-red;
+    color: $c-white;
+    text-decoration: none;
+  }
 }
