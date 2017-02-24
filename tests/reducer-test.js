@@ -19,6 +19,6 @@ module('reducer', () => {
     const actionOne = { type: 'CONTACT@CREATE', data: { firstName: 'Johnny', lastName: 'Depp' } };
     const actionTwo = { type: 'CONTACT@CREATE', data: { firstName: 'Angelina', lastName: 'Jolie' } };
     assert.deepEqual(reducer(emptyState, actionOne), { contacts: [actionOne.data] });
-    assert.deepEqual(reducer(oldState, actionOne), { contacts: [actionTwo.data, { firstName: 'Johnny', lastName: 'Depp' }] });
+    assert.deepEqual(reducer(oldState, actionOne), { contacts: [actionOne.data, actionTwo.data] });
   });
 });
