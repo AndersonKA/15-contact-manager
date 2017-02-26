@@ -6,7 +6,7 @@ export default class FormView {
   mounted() {
   // Listen for submit events...
   this.el.addEventListener('submit', (event) => {
-    // Stop the browser's default behavior (makes it not refresh the page)
+    // Stop the browser's default behavior (makes it not submit to the server)
     event.preventDefault();
 
 
