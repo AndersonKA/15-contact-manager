@@ -5,7 +5,6 @@ module('reducer', () => {
     assert.deepEqual(reducer(null, {}), { contacts: [] }, 'default state');
   });
 
-
   test('load all contacts', (assert) => {
     const emptyState = { contacts: [] };
     const oldState = { contacts: [{ firstName: 'Angelina', lastName: 'Jolie' }] };
