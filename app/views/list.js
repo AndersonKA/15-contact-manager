@@ -3,15 +3,14 @@ class ItemView {
     this.data = data;
     this.store = store;
 
-    this.el = document.createElement('li');
-    this.el.classList.add('grid__item');
+    this.el = document.createElement('div');
+    this.el.classList.add('grid-item');
     this.el.innerHTML = `
     <div class="grid-top">
-      <span class="grid-first"></span>
-      <span class="grid-last"></span>
+      <span class="grid-name"></span>
       <div class="grid-street"></div>
-      <span class="grid-city"></span>
-      <span class="grid-state"></span>
+      <span class="grid-address"></span>
+
     </div>
       <button class="grid-delete">Delete</button>
   `;
@@ -20,15 +19,11 @@ class ItemView {
   mounted() {}
 
   render() {
-    this.el.querySelector('.grid-last').innerText = this.data.lastName;
-    this.el.querySelector('.grid-first').innerText = this.data.firstName;
+    this.el.querySelector('.grid-name').innerText = `${this.data.lastName}, ${this.data.firstName}`;
+
     this.el.querySelector('.grid-street').innerText = this.data.street;
-    this.el.querySelector('.grid-city').innerText = this.data.city;
-    this.el.querySelector('.grid-state').innerText = this.data.state;
+    this.el.querySelector('.grid-address').innerText = `${this.data.city}, ${this.data.state}`;
 
-
-    // Maybe change the color of the card with MATHS!!!
-    const score = (parseInt(this.data.taste) + parseInt(this.data.sweetness) + parseInt(this.data.texture)) / 3;
   }
 }
 
@@ -64,3 +59,6 @@ export default class ListView {
     });
   }
 }
+
+
+// might need to add an event listener for the delete button?
