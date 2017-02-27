@@ -10,7 +10,6 @@ class ItemView {
       <span class="grid-name"></span>
       <div class="grid-street"></div>
       <span class="grid-address"></span>
-
     </div>
       <button class="grid-delete">Delete</button>
   `;
@@ -20,10 +19,8 @@ class ItemView {
 
   render() {
     this.el.querySelector('.grid-name').innerText = `${this.data.lastName}, ${this.data.firstName}`;
-
     this.el.querySelector('.grid-street').innerText = this.data.street;
     this.el.querySelector('.grid-address').innerText = `${this.data.city}, ${this.data.state}`;
-
   }
 }
 

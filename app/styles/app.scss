@@ -32,8 +32,6 @@ $c-border: #cdd3d6;
   }
 
   &-field {
-    // display: flex;
-    // flex-grow: 1;
     min-width: 10.5rem;
     padding: 0.5rem;
     border: 0;
@@ -68,15 +66,20 @@ $c-border: #cdd3d6;
   display: flex;
   flex-wrap: wrap;
 
+
   &-item {
+    position: relative;
     flex-basis: calc(100% / 3 - 2rem);
-    margin: 1rem;
-    border: 0.025rem solid $c-border;
-    background: $c-white;
+    flex-grow: 1;
+    justify-content: center;
+    min-width: 15rem;
+    margin: 0.5rem;
   }
 
   &-top {
     padding: 1rem;
+    border: 0.025rem solid $c-border;
+    background: $c-white;
   }
 
   &-name {
@@ -89,6 +92,7 @@ $c-border: #cdd3d6;
   }
 
   &-delete {
+    bottom: 0;
     width: 100%;
     padding: 1rem;
     border: 0;
