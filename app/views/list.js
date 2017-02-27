@@ -56,6 +56,3 @@ export default class ListView {
     });
   }
 }
-
-
-// might need to add an event listener for the delete button?

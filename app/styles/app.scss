@@ -12,50 +12,10 @@ $c-red: #fa0026;
 $c-white: #fff;
 $c-border: #cdd3d6;
 
-
 @import 'box-sizing';
 @import 'resets';
+@import 'sidebar';
 
-.sidebar {
-  position: relative;
-  min-width: 12rem;
-  height: 100vh;
-  background: $c-blue;
-  box-shadow: 0 0 0.5rem 0 rgba(#000, 0.4);
-
-  &-top {
-    padding: 1rem 0.5rem;
-    background: $c-lightblue;
-    font-size: 1.25rem;
-    font-weight: bold;
-    box-shadow: 0 0 0.5rem 0 rgba(#000, 0.4);
-  }
-
-  &-field {
-    min-width: 10.5rem;
-    padding: 0.5rem;
-    border: 0;
-    outline: none;
-    background: $c-lightblue;
-    box-shadow: 0 0 0.5rem 0 rgba(#000, 0.2);
-  }
-}
-
-.field {
-  margin: 0.5rem;
-}
-
-.submit {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 1rem;
-  border: 0;
-  outline: none;
-  background: $c-green;
-  color: $c-white;
-  text-decoration: none;
-}
 
 .section {
   flex-grow: 1;
@@ -65,7 +25,6 @@ $c-border: #cdd3d6;
 .grid {
   display: flex;
   flex-wrap: wrap;
-
 
   &-item {
     position: relative;

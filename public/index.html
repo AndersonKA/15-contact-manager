@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>15-contact-manager</title>
   <link rel="stylesheet" href="/app.css">
 </head>
+
 <body class="root">
 
-  <aside class="sidebar">
-
+  <form class="sidebar contact-form">
     <div class="sidebar-top">New Contact</div>
-    <form class="sidebar-middle">
+    <div class="sidebar-stuff">
 
       <div class="field">
         <div class="field-first">First Name</div>
@@ -32,11 +33,12 @@
         <div class="field-state">State</div>
         <input type="text" class="sidebar-field sidebar-state">
       </div>
-      <div class="button">
-        <button class="submit">Submit</button>
-      </div>
-    </form> <!--end of sidebar-middle-->
-  </aside>
+      <!--end of sidebar-middle-->
+    </div>
+    <div class="button">
+      <button class="submit">Submit</button>
+    </div>
+  </form>
 
   <div class="section">
     <div class="container">
@@ -50,12 +52,13 @@
             <span class="grid-city">City, </span>
             <span class="grid-state">State</span>
           </div>
-            <button class="grid-delete">Delete</button>
+          <button class="grid-delete">Delete</button>
         </div>
 
       </div>
     </div>
-</div>
+  </div>
   <script src="/app.js" charset="utf-8"></script>
 </body>
+
 </html>

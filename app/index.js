@@ -5,5 +5,5 @@ import store from './store';
 
 const el = document.querySelector('.root');
 
-const controller = new AppController (el, store);
+const controller = new AppController(el, store);
 controller.created();
