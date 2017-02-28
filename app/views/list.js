@@ -15,7 +15,11 @@ class ItemView {
   `;
   }
 
-  mounted() {}
+  mounted() {
+    this.el.querySelector('.delete').addEventListener('click', () => {
+      this.store.dispatch(contactDelete(this.contact.id));
+    });
+  }
 
   render() {
     this.el.querySelector('.grid-name').innerText = `${this.data.lastName}, ${this.data.firstName}`;
