@@ -1,3 +1,5 @@
+import {contactCreate} from './actions';
+
 export default class FormView {
   constructor(el, store) {
     this.el = el;
@@ -19,7 +21,7 @@ export default class FormView {
         state: this.el.querySelector('.sidebar-state').value,
       };
 
-      this.store.dispatch({ type: 'CONTACT@CREATE', data });
+      this.store.dispatch(contactCreate(data));
     });
   }
 }

@@ -1,3 +1,5 @@
+import { contactDelete } from './actions';
+
 class ItemView {
   constructor(data, store) {
     this.data = data;
@@ -16,8 +18,8 @@ class ItemView {
   }
 
   mounted() {
-    this.el.querySelector('.delete').addEventListener('click', () => {
-      this.store.dispatch(contactDelete(this.contact.id));
+    this.el.querySelector('.grid-delete').addEventListener('click', () => {
+      this.store.dispatch(contactDelete(this.data.id));
     });
   }
 

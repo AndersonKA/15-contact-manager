@@ -7,7 +7,7 @@ module('reducer', () => {
 
   test('load all contacts', (assert) => {
     const emptyState = { contacts: [] };
-    const oldState = { contacts: [{ firstName: 'Angelina', lastName: 'Jolie' }] };
+    // const oldState = { contacts: [{ firstName: 'Angelina', lastName: 'Jolie' }] };
     const actionOne = { type: 'CONTACT@FIND_ALL', data: [{ firstName: 'John', lastName: 'Cena' }] };
     assert.deepEqual(reducer(emptyState, actionOne), { contacts: actionOne.data });
   });
@@ -32,7 +32,7 @@ module('reducer', () => {
   test('remove one contact when there are multiple', (assert) => {
     const oldState = { contacts: [{ firstName: 'Angelina', lastName: 'Jolie', id: 1 }, { firstName: 'Brad', lastName: 'Pitt', id: 2 }] };
     const action = { type: 'CONTACT@REMOVE', data: 2 };
-    const expectedState = {contacts: [{ firstName: 'Angelina', lastName: 'Jolie', id: 1 }] };
+    const expectedState = { contacts: [{ firstName: 'Angelina', lastName: 'Jolie', id: 1 }] };
 
     assert.deepEqual(reducer(oldState, action), expectedState);
   });
